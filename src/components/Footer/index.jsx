@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div data-theme="luxury">
       {/* 分隔線 */}
-      <hr className="my-6 w-full border-t-2  rounded-sm opacity-100" />
+      <hr className=" text-purple-400 my-6 w-full border-t-2  rounded-sm opacity-100" />
       <div data-theme="luxury">
         <footer className="footer text-white py-6">
           {/* 描述區塊 */}

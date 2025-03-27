@@ -19,7 +19,7 @@ function ProductDetail({ product }) {
                 <p className="text-white opacity-60 text-base mb-4">{product.summary}</p>
 
                 {/* 價格與按鈕 */}
-                <div className="flex flex-col gap-4">
+                <div className="text-purple-400 flex flex-col gap-4">
                     <p className="text-2xl font-semibold">US${product.price}.00</p>
                     <AddToCart />
                 </div>

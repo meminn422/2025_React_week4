@@ -2,7 +2,7 @@ import {Link} from "react-router"
 
 function Header({title,slogan}){
     return(
-        <header data-theme="luxury" className="text-center flex flex-col items-center header">
+        <header data-theme="luxury" className="text-purple-200 text-center flex flex-col items-center header">
             <Link to='/'>
             <h2 className="pt-5 pb-2 text-3xl font-bold">{title}</h2>
             </Link>
