@@ -6,8 +6,8 @@ function Home(){
     return(
         <div  data-theme="luxury" className='container mx-auto main-layout'>
             <Header
-                title = "Welcome to the BookStore"
-                slogan = "The Great Place to Buy Books!"
+                title = "Welcome to meminn BookStore"
+                slogan = "Nice to see u"
             />
             <ProductList className="content"/>
             <Footer className="footer" />
