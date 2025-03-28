@@ -1,35 +1,28 @@
-import {Link} from 'react-router'
- 
-function ProductItem({product}){
-    return(
-        <section className="pt-4 px-3 lg:px-4">
-            <div className="max-w-xs mx-auto border border-gray-500 rounded overflow-hidden">
-                <Link to={`/products/id/${product.id}`}>
-                    <img className=" w-full" src={product.cover} alt={product.name}/>
-                </Link>
-                <div className="p-4">
-                    <h4 className="text-white font-bold mb-1">
-                        {product.title}
-                    </h4>
-                    <h6 className="text-gray-400 mb-3">
-                        {product.author}
-                    </h6>
-                    <p className="text-white opacity-70 mb-3">{product.summary_short}</p>
-                    <div className="flex justify-between flex-wrap">
-                        <Link to={`/products/id/${product.id}`} className="text-purple-300 no-underline flex items-center">
-                            See More
-                            <svg width="24" height="20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                            </svg>
-                        </Link>
-                        <span className="text-gray-500 inline-flex items-center leading-none text-lg pr-3 py-1 font-bold">
-                            {product.price}
-                        </span>
-               </div>
+import AddToCart from './AddToCart'
+
+function ProductDetail({ product }) {
+    return (
+        <div data-theme="luxury" className="flex flex-col items-center px-4 gap-6 max-w-4xl mx-auto">
+            {/* 圖片在上 */}
+            <img
+                alt={product.title}
+                className="w-full max-w-md h-96 object-cover object-center rounded-md"
+                src={product.cover}
+            />
+
+            {/* 說明文字與按鈕在下 */}
+            <div className="w-full max-w-2xl text-center">
+                <h1 className="text-white text-2xl font-bold mb-2">{product.title}</h1>
+                <h2 className="text-white opacity-40 mb-1 text-lg">{product.author}</h2>
+                <p className="text-white opacity-60 text-base mb-4">{product.summary}</p>
+
+                <div className="text-purple-400 flex flex-col items-center gap-4">
+                    <p className="text-2xl font-semibold">US${product.price}.00</p>
+                    <AddToCart />
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 
-export default ProductItem
+export default ProductDetail;
